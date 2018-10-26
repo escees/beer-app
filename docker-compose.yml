@@ -1,0 +1,24 @@
+version: '3.5'
+services:
+    mysql:
+      image: mysql:5.7
+      volumes:
+        - db_data:/var/lib/mysql
+      environment:
+          MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+          MYSQL_DATABASE: "${MYSQL_DATABASE}"
+          MYSQL_USER: "${MYSQL_USER}"
+          MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+      ports:
+        - "${MYSQL_EXTERNAL_PORT}:3306"
+      restart: unless-stopped
+
+    php-fpm:
+      build: .docker/php-fpm
+      volumes:
+          - .:/var/www/html
+          - ./.docker/php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
+      restart: unless-stopped
+
+volumes:
+    db_data:
