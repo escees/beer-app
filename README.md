@@ -44,9 +44,9 @@ All data can be accessed through the browser or with curl requests from CLI.
 
 Brewers:
 
-- $ curl -X POST -H "Content-Type: application/json" beerapp.local/api/brewer/list -d 
+- $ curl -X GET -H "Content-Type: application/json" beerapp.local/api/brewer/list -d 
 
 Beers:
 
-- $ curl -X POST -H "Content-Type: application/json" beerapp.local/api/beer/list -d 
-- $ curl -X POST -H "Content-Type: application/json" beerapp.local/api/beer/{id} -d 
+- $ curl -X GET -H "Content-Type: application/json" beerapp.local/api/beer/list -d 
+- $ curl -X GET -H "Content-Type: application/json" beerapp.local/api/beer/{id} -d 
