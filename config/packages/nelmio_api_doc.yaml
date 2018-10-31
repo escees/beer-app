@@ -1,6 +1,6 @@
 nelmio_api_doc:
   documentation:
-    host: beerapp.local
+    host: '%env(NELMIO_API_DOC_HOST)%'
     schemes: [http]
     info:
       title: My App
