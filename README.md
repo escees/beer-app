@@ -1,6 +1,6 @@
 # beer-app
 
-Setup application
+Setup application (this is for ubuntu - for other systems there might be additional steps to do)
 
 Please follow these steps:
 
@@ -38,3 +38,12 @@ Import Data:
 
 If setup went well we should see an information that import was successful.
 All data can be accessed through the browser.
+
+Brewers:
+
+- $ curl -X POST -H "Content-Type: application/json" beerapp.local/api/brewer/list -d 
+
+Beers:
+
+- $ curl -X POST -H "Content-Type: application/json" beerapp.local/api/beer/list -d 
+- $ curl -X POST -H "Content-Type: application/json" beerapp.local/api/beer/{id} -d 
