@@ -1,0 +1,16 @@
+nelmio_api_doc:
+  documentation:
+    host: beerapp.local
+    schemes: [http]
+    info:
+      title: My App
+      description: This is an awesome app!
+      version: 1.0.0
+    securityDefinitions:
+      Bearer:
+        type: apiKey
+        description: 'Value: Bearer {jwt}'
+        name: Authorization
+        in: header
+    security:
+    - Bearer: []

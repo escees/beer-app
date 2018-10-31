@@ -1,4 +1,7 @@
 framework:
+    serializer: { enabled: true }
+    property_info: { enabled: true }
+    validation: { enabled: true, enable_annotations: true }
     secret: '%env(APP_SECRET)%'
     #default_locale: en
     #csrf_protection: true
