@@ -32,9 +32,9 @@ php/api
 
 Import Data:
 
-- docker-compose exec php-fpm bash
-- bin/console doctrine:migrations:migrate
-- bin/console app:beer:import
+`- docker-compose exec php-fpm bash`
+`- bin/console doctrine:migrations:migrate`
+`- bin/console app:beer:import`
 
 If setup went well we should see an information that import was successful.
 All data can be accessed through the browser or with curl requests from CLI.
