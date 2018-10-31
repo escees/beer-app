@@ -37,7 +37,7 @@ Import Data:
 - bin/console app:beer:import
 
 If setup went well we should see an information that import was successful.
-All data can be accessed through the browser.
+All data can be accessed through the browser or with curl requests from CLI.
 
 Brewers:
 
